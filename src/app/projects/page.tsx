@@ -17,7 +17,7 @@ export default async function Page() {
     `*[_type == "project"][]{mainImage,"slug":slug.current}`
   );
   return (
-    <div className="max-sm:mx-5 mx-10 mt-24">
+    <div className="max-sm:mx-5 mx-10 mt-32">
       <section className="flex max-lg:flex-col-reverse lg:space-x-6 max-w-screen-xl mx-auto">
         <div className="opacity-50 h-fit lg:w-1/2 max-lg:mr-auto mt-3 font">
           <p>{projects && projects.length} featured projects</p>
@@ -29,7 +29,7 @@ export default async function Page() {
           </h1>
         </div>
       </section>
-      <section className="max-sm:grid-cols-1 grid-cols-2 lg:grid-cols-3 grid mb-10 mt-16 gap-6">
+      <section className="max-sm:grid-cols-1 grid-cols-2 lg:grid-cols-3 grid mb-10 mt-24 gap-6">
         {projects &&
           projects.map((i: SanityObject, index: number) => {
             return (
