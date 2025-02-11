@@ -2,20 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.mask {
+  clip-path: polygon(0 0, 130% 0, 130% 130%, 0% 130%);
+}
+.mask-1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h2 {
+  font-size: clamp(40px, 5vw, 60px);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  max-width: 2000px;
+  color: white;
+  background-color: black;
+  font-family: "Helvetica Neue", sans-serif;
+  position: relative;
+  margin: auto;
+}
+html,
+body {
+  height: fit-content;
+  overflow-x: clip;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+::-moz-selection {
+  background: white;
+  color: #1790ce;
+}
+
+::selection {
+  background: white;
+  color: #1790ce;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 26px;
+  border: 0px solid #ffffff;
+}
+.glassmorphism {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.glassmorphism-lg {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }

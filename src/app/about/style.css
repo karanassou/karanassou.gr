@@ -1,0 +1,17 @@
+.paragraph {
+    font-size: clamp(20px, 3vw, 50px);
+    display: flex;
+    line-height: 1;
+    color: white;
+    flex-wrap: wrap;
+    font-weight: 300;
+}
+.word {
+    position: relative;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+.shadow {
+    position: absolute;
+    opacity: 20%;
+}
