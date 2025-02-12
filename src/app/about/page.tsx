@@ -33,7 +33,7 @@ export default function Page() {
     <div ref={container}>
       <div className="mx-auto pt-16 max-w-screen-xl px-10 max-sm:px-5 w-full space-y-6">
         <Paragraph
-          par={`1996 is the year we started working in graphic design. After years of experience in the field of book publications, working with IANOS Publications, we returned to our hometown to work and ultimately create something new. Now, we have our own design studio, always learning and evolving along the proccess.`}
+          par={`1996 is the year we started working in graphic design. After years of experience in the field of book publications, working with IANOS Publications, we returned to our hometown to work and ultimately create something new. Now, we have our own design studio, always learning and evolving along the process.`}
         />
       </div>
       <div className="py-10 flex pr-16">

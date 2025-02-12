@@ -8,6 +8,7 @@ import { AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import portableTextComponents from "./sanityComponents";
 import { X } from "@phosphor-icons/react";
+import { notFound } from "next/navigation";
 
 interface SanityProject {
   client: string;
@@ -42,7 +43,7 @@ export default function Page({ params }: { params: { id: string } }) {
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
   const bottom = useTransform(scrollYProgress, [0, 0.4], ["0", "-80vh"]);
 
-  const [p, setP] = useState<null | SanityProject>(null);
+  const [p, setP] = useState<null | string | SanityProject>(null);
   const [image, setImage] = useState<number | null>(null);
   useEffect(() => {
     client
@@ -57,10 +58,17 @@ export default function Page({ params }: { params: { id: string } }) {
         }`
       )
       .then((res) => {
-        const project = res[0];
-        setP(project);
+        if (res[0]) {
+          const project = res[0];
+          setP(project);
+        } else {
+          setP("notfound");
+        }
       });
   }, []);
+  if (p === "notfound") {
+    return notFound();
+  }
   return (
     <div>
       {p && (

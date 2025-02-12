@@ -68,10 +68,10 @@ export default function Page() {
           <div className="flex max-sm:text-right max-sm:w-[90vw] max-md:w-[70vw] max-md:flex-col md:w-[70vw] xl:w-[50vw] md:space-x-7 max-md:space-y-4 px-12 mr-0 ml-auto">
             <p>
               Ioanna Karanassou is an EVGE awarded graphic designer. Our clients
-              include IANOS and the Kasandra Festival.
+              include IANOS and the Kassandra Festival.
             </p>
             <p>
-              We help businesses grow through their brand identites,{" "}
+              We help businesses grow through their brand identities,{" "}
               <span className="whitespace-nowrap">e-commerce</span>, digital
               experiences and social media.
             </p>
